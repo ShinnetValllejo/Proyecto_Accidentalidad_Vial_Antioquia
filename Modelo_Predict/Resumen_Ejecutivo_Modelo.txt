@@ -1,0 +1,26 @@
+📄 RESUMEN EJECUTIVO DEL PROYECTO
+============================================================
+📈 ESTADÍSTICAS GENERALES:
+   • Total de accidentes analizados: 203,435
+   • Accidentes con heridos/muertos: 102,501
+   • Tasa de accidentes con heridos: 50.39%
+
+🤖 MODELO RANDOM FOREST:
+   • Exactitud: 76.79%
+   • Precisión: 95.01%
+   • Sensibilidad: 56.93%
+   • F1-Score: 0.7120
+   • AUC-ROC: 0.8274
+
+🔍 HALLAZGOS PRINCIPALES:
+   • Franja horaria más peligrosa: MAÑANA
+   • Tipo de accidente más peligroso: ATROPELLO
+   • Comuna con mayor tasa de heridos: RURAL
+
+💡 RECOMENDACIONES:
+   1. Reforzar vigilancia en: MAÑANA
+   2. Implementar campañas preventivas para: ATROPELLO
+   3. Focalizar recursos de control en: RURAL
+   4. Utilizar el modelo predictivo para priorizar zonas de riesgo.
+
+✔️ Resumen ejecutivo guardado en: C:\Users\DanielaVallejo\Desktop\Proyecto_Accidentalidad_Vial_Antioquia\Modelo_Predict\Resumen_Ejecutivo_Modelo.txt
