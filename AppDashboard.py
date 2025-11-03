@@ -6,6 +6,8 @@ import streamlit as st
 from pathlib import Path
 from PIL import Image
 import pandas as pd
+import os
+from pathlib import Path
 
 # ======================================================
 # CONFIGURACIÓN INICIAL
@@ -19,7 +21,7 @@ st.set_page_config(
 # ======================================================
 # RUTAS PRINCIPALES (IGUALES AL SCRIPT DE MODELO)
 # ======================================================
-BASE_DIR = Path(r"C:/Users/DanielaVallejo/Desktop/Proyecto_Accidentalidad_Vial_Antioquia")
+BASE_DIR = Path(__file__).parent.resolve()
 GRAF_DIR = BASE_DIR / "Graficas_Salida"
 MODEL_DIR = BASE_DIR / "Modelo_Predict"
 
