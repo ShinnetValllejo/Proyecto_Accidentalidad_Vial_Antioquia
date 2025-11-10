@@ -90,11 +90,15 @@ df.drop(columns=["HORA_dt"], inplace=True)
 # Clasificar jornada (sigue usando HORA string limpio)
 df["JORNADA"] = df["HORA"].map(clasificar_jornada)
 
-# Día, número de semana y número de mes
+# Día, número de semana, número de mes y nombre del mes
 df["FECHA_dt"] = pd.to_datetime(df["FECHA"], format="%d/%m/%Y", errors="coerce")
 df["NUM_DIA_SEMANA"] = df["FECHA_dt"].dt.weekday + 1
 df["NUM_MES"] = df["FECHA_dt"].dt.month
+df["NOM_MES"] = df["FECHA_dt"].dt.month_name(locale='es_ES')  # Nombre del mes en español
+df["ANIO"] = df["FECHA_dt"].dt.year
 df.drop(columns=["FECHA_dt"], inplace=True)
+# Crear campo ANIO/MES en formato YYYY/MM
+df["ANIO_MES"] = df["ANIO"].astype(str) + "/" + df["NUM_MES"].astype(str).str.zfill(2)
 
 # Normalización de todos los textos (mantengo HORA y NUM_HORA fuera; HORA ya es string)
 for col in df.columns:
